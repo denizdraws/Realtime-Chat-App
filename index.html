@@ -9,13 +9,33 @@
     <title>Chat App</title>
     <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script defer src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/04a1aeefcd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="message-container"></div>
-    <form id="send-container">
-      <input type="text" id="message-input" autocomplete="off" />
-      <button type="submit" id="send-button">Send</button>
-    </form>
+    <h1 id="title"><i class="fas fa-comment-alt"></i>Hello friends!</h1>
+    <div id="main-wrapper">
+      <div id="message-container"></div>
+      <form id="send-container">
+        <input
+          type="text"
+          id="message-input"
+          placeholder="What's up, friends?"
+          autocomplete="off"
+        />
+        <button id="emoji-button"><i class="fas fa-smile-wink"></i></button>
+        <button type="submit" id="send-button">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
   </body>
 </html>

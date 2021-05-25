@@ -1,7 +1,11 @@
-/* Changes made to this file will NOT restart the server */
+/* Changes made to this file will restart the server */
 :root {
-  --text-color: #c6cecf;
-  --background: #333;
+  --dark-dark: #18181f;
+  --dark-light: #3b3b4a;
+  --light-dark: #5e5ce6;
+  --light-light: #7a7ae6;
+  --off-white: #e5dfcc;
+  --border: none;
 }
 
 body {
@@ -13,39 +17,81 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: var(--background);
+  background-color: black;
 }
 
-#message-container {
-  width: 80%;
-  max-width: 1200px;
-  border-style: solid;
-  border-color: black;
+body #title {
+  color: var(--light-dark);
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
 }
 
-#message-container div {
-  background-color: #ccc;
-  padding: 5px;
-}
-
-#message-container div:nth-child(2n) {
-  background-color: #fff;
-}
-
-#send-container {
+body #main-wrapper {
+  background-color: var(--dark-dark);
+  border-radius: 10px;
   position: fixed;
   padding-bottom: 30px;
-  bottom: 0;
+  bottom: 100px;
   max-width: 1200px;
-  width: 80%;
+  width: 85%;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#message-input {
+body #main-wrapper #message-container {
+  width: 100%;
+  max-width: inherit;
+}
+
+body #main-wrapper #message-container div {
+  padding: 5px;
+  border: var(--border);
+}
+
+body #main-wrapper #send-container {
+  position: fixed;
+  bottom: 50px;
+  max-width: 1200px;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: var(--border);
+  border-radius: 10px;
+}
+
+body #main-wrapper #send-container #message-input {
+  background-color: var(--dark-dark);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  color: var(--off-white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  height: 36px;
+  outline: none;
 }
+
+body #main-wrapper #send-container #emoji-button {
+  border: none;
+  background-color: var(--light-dark);
+}
+
+body #main-wrapper #send-container #send-button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  background-color: var(--light-dark);
+}
+
+/* Issues
+hello friends left */
 /*# sourceMappingURL=style.css.map */
